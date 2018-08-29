@@ -1,0 +1,15 @@
+<h1>All Articles</h1>
+
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+<% @articles.each do |a| %>
+	<tr>
+		<td>Title: <%= a.title %></td>
+		<td>Text: <%= a.description %></td>
+		<td><a href=""></a>
+	<tr>
+<% end %>
+</table>
