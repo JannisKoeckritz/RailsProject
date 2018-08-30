@@ -14,11 +14,19 @@
  @import "bootstrap";
 
  .content {
- 	margin-left: 20px;
- 	margin-right: 20px;
  	margin-top: 20px;
  };
+
+ .welcome {
+ 	background-image: url('welcome.jpg');
+ 	border: 1px solid black;
+ 	background-size: cover;
+ }
  
+ .search-nav{
+ 	background-color: white;
+ 	color: grey;
+ }
  #logo{
  	float: left;
  	font-size: 1.7em;

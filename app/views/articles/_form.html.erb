@@ -6,16 +6,21 @@
 	<% end %>
 	</ul>
 <% end %>
+<form>
 <%= form_for @article do |f| %>
-	<p>
+	<div class="form-group">
 	<%= f.label :title %>
-  <%= f.text_field :title %>
-  </p>
-  <p>
+  <%= f.text_field :title, class: "form-control", placeholder: "Enter Title here", aria_describedby:"titleHelp" %>
+  <small id="titlelHelp" class="form-text text-muted">Use an interesting title, at least 5 symbols</small>
+	</div>
+
+  <div class="form-group">
   <%= f.label :description %><br />
-  <%= f.text_area :description, size: "60x12" %>
-	</p>
+  <%= f.text_area :description, size: "60x12", class: "form-control", placeholder: "Enter your text here", aria_describedby: "descriptionHelp" %>
+  <small id="descriptionlHelp" class="form-text text-muted">At least 10 symbols.</small>
+	</div>
   <%= f.submit %>
 <% end %>
+</form>
 
 <%= link_to "Back to articles listing", articles_path %>
