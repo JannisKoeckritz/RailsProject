@@ -4728,3 +4728,624 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 14:53:49 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3358ms (Views: 3345.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 14:58:39 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 14:58:43 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (19.3ms)
+  Rendered articles/new.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 14:58:47 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 14:58:49 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 52.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-08-30 14:58:53 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=xiz31RgTvmGUbirDBtqU%2FteFFj7EkD0zoEZpwnX017%2B1DXvkziA0jIeHbwXqqInRxtaCqUiKcxaXP%2Ba7kQxLTA%3D%3D&article%5Btitle%5D=My+first+post&article%5Bdescription%5D=This+is+the+content+of+my+first+post%21%21%21&commit=Update+Article" for 127.0.0.1 at 2018-08-30 14:58:56 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xiz31RgTvmGUbirDBtqU/teFFj7EkD0zoEZpwnX017+1DXvkziA0jIeHbwXqqInRxtaCqUiKcxaXP+a7kQxLTA==", "article"=>{"title"=>"My first post", "description"=>"This is the content of my first post!!!"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 14:58:58 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 14:59:31 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:12:25 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (14.4ms)
+  Rendered articles/new.html.erb within layouts/application (36.0ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 307ms (Views: 285.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:13:51 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.3ms)
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/janniskoeckritz/Documents/GitHub/RailsProject/app/views/articles/_form.html.erb:22: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: "tn btn-outline-success" );@o
+                              ^):
+  
+app/views/articles/_form.html.erb:22: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/new.html.erb:2:in `_app_views_articles_new_html_erb__2838076312346070725_70120223921360'
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:14:03 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (0.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/janniskoeckritz/Documents/GitHub/RailsProject/app/views/articles/_form.html.erb:22: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: "btn btn-outline-success" );@
+                              ^):
+  
+app/views/articles/_form.html.erb:22: syntax error, unexpected tLABEL, expecting '='
+app/views/articles/new.html.erb:2:in `_app_views_articles_new_html_erb__2838076312346070725_70120220875320'
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:16:30 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:16:49 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 15:16:59 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new?utf8=%E2%9C%93&authenticity_token=cSB7%2BzOdfoP6%2FFRHIR7GZiemE%2FaqbLSJ5RfYU9%2BNdXv58OCI3Kv8zkIvhnjOejQbFf075pV2YBbzHIILsT%2BZ3w%3D%3D&article%5Btitle%5D=&article%5Bdescription%5D=&commit=Create+Article" for 127.0.0.1 at 2018-08-30 15:17:14 +0200
+Processing by ArticlesController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cSB7+zOdfoP6/FRHIR7GZiemE/aqbLSJ5RfYU9+NdXv58OCI3Kv8zkIvhnjOejQbFf075pV2YBbzHIILsT+Z3w==", "article"=>{"title"=>"", "description"=>""}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.4ms)
+  Rendered articles/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 20:12:12 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 263ms (Views: 247.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 20:12:42 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (6.2ms)
+  Rendered articles/new.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new?utf8=%E2%9C%93&authenticity_token=eXiidKvGCYYfgx6EwN%2FOEjEyvozJ48lZikdeo83BHENpDCsnkEVjr%2FJmuNW8y7CcaoWyO9%2FuANc7lx6tMNwRaQ%3D%3D&article%5Btitle%5D=Hello+World&article%5Bdescription%5D=Hello+Up+Jawbone%21&commit=Create+Article" for 127.0.0.1 at 2018-08-30 20:13:05 +0200
+Processing by ArticlesController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eXiidKvGCYYfgx6EwN/OEjEyvozJ48lZikdeo83BHENpDCsnkEVjr/JmuNW8y7CcaoWyO9/uANc7lx6tMNwRaQ==", "article"=>{"title"=>"Hello World", "description"=>"Hello Up Jawbone!"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:13:09 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (8.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 83ms (Views: 66.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:13:27 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 20:13:29 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new?utf8=%E2%9C%93&authenticity_token=WiM6EHuT1pUx8dFyAYwYt5H83ztKph69WLMrzX%2FcVFtKV7NDQBC8vNwUdyN9mGY5ykvTjFyr1zPpY2vDgsFZcQ%3D%3D&article%5Btitle%5D=Hello+World&article%5Bdescription%5D=Hello+Up+Jawbone%21&commit=Create+Article" for 127.0.0.1 at 2018-08-30 20:13:55 +0200
+Processing by ArticlesController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WiM6EHuT1pUx8dFyAYwYt5H83ztKph69WLMrzX/cVFtKV7NDQBC8vNwUdyN9mGY5ykvTjFyr1zPpY2vDgsFZcQ==", "article"=>{"title"=>"Hello World", "description"=>"Hello Up Jawbone!"}, "commit"=>"Create Article"}
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:13:58 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-08-30 20:14:05 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1/edit?utf8=%E2%9C%93&_method=patch&authenticity_token=1o1DCAkeXqMH4RNgbtDN5MMbX0lQiMVH%2FyhAf%2B0DltelrM853y3UThQIVqaCotDL0kjL3tySi2LIUc8GCfsKJA%3D%3D&article%5Btitle%5D=My+first+post&article%5Bdescription%5D=This+is+the+content+of+my+first+post%21%21%21&commit=Update+Article" for 127.0.0.1 at 2018-08-30 20:14:07 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1o1DCAkeXqMH4RNgbtDN5MMbX0lQiMVH/yhAf+0DltelrM853y3UThQIVqaCotDL0kjL3tySi2LIUc8GCfsKJA==", "article"=>{"title"=>"My first post", "description"=>"This is the content of my first post!!!"}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/edit.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2018-08-30 20:14:14 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/edit.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 20:15:35 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 20:15:36 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.4ms)
+  Rendered articles/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-30 20:15:54 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pKn44ucbwHip7tzXdoKLTkiuBoSGusv/vGbWngTLvdu03XGx3JiqUUQLeoYKlvXAExkKM5C3AnENtpaQ+daw8Q==", "article"=>{"title"=>"Hallo World", "description"=>"Hallo Jawbone, how are you!"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hallo World"], ["description", "Hallo Jawbone, how are you!"], ["created_at", "2018-08-30 18:15:54.593419"], ["updated_at", "2018-08-30 18:15:54.593419"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/16
+Completed 302 Found in 7ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/articles/16" for 127.0.0.1 at 2018-08-30 20:15:54 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-30 20:16:32 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-30 20:16:41 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-30 20:16:55 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXd9sdVAmwG/4WOsuAigUGlOKloYgmGQlZTVDhU3n0mZA/Ti7sPxKFIExf3EHN7eMvkm7Q6PqB4kRJUA6CqSYw==", "article"=>{"title"=>"Hallo Welt!!!", "description"=>"Mir gehts heute sehr gut!"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hallo Welt!!!"], ["description", "Mir gehts heute sehr gut!"], ["created_at", "2018-08-30 18:16:55.002949"], ["updated_at", "2018-08-30 18:16:55.002949"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/17
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/articles/17" for 127.0.0.1 at 2018-08-30 20:16:55 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/17/edit" for 127.0.0.1 at 2018-08-30 20:17:04 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/edit.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/17" for 127.0.0.1 at 2018-08-30 20:17:06 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M53/XOScBjiFyUZ9q5GNnVUEmWt88ycPITrS20Tdq/06ITnFP9g/gUSxZfr09sbBE3SQ/nXoKFLVkryiuHpgig==", "article"=>{"title"=>"Hallo Welt!!!", "description"=>"Mir gehts heute sehr gut!"}, "commit"=>"Update Article", "id"=>"17"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/17
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/17" for 127.0.0.1 at 2018-08-30 20:17:06 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:17:08 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/17" for 127.0.0.1 at 2018-08-30 20:17:17 +0200
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dM0fAGsfptzIfbvqXKcF7Ezf4G4pqQ/JReN/0ToNwQD8HYRzhCkkkXCuadWzw/eRfoTIfhaz21ZT6CWJVL8tpA==", "id"=>"17"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 17]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:17:17 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:17:47 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/16" for 127.0.0.1 at 2018-08-30 20:17:51 +0200
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4jvgmz5CwZxVxSs3J1vgk3NvwYhs+/JYfBTUKwi4v/1q63vo0XRD0e0W+QjIPxLuQTTpmFPhJsdqH45zZgpTWQ==", "id"=>"16"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 16]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 5ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:17:51 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-30 20:18:24 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-31 09:00:12 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2718ms (Views: 2696.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-31 09:00:33 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-31 09:00:37 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-31 09:00:51 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JY9gVAuXpAgn8uwyhC0viq39Ip7xiMKGOZV63IdY73c1++kHMBTOIcoXSmP4OVEE9kouKeeFCwiIRTrSekXiXQ==", "article"=>{"title"=>"TestEntry", "description"=>"This is a test entry!"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "TestEntry"], ["description", "This is a test entry!"], ["created_at", "2018-08-31 07:00:51.694343"], ["updated_at", "2018-08-31 07:00:51.694343"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/18
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/articles/18" for 127.0.0.1 at 2018-08-31 09:00:51 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-31 09:00:56 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-31 09:01:02 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-08-31 09:01:03 +0200
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 51.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-31 09:01:04 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-31 09:01:05 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+

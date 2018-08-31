@@ -6,7 +6,6 @@
 	<% end %>
 	</ul>
 <% end %>
-<form>
 <%= form_for @article do |f| %>
 	<div class="form-group">
 	<%= f.label :title %>
@@ -21,6 +20,5 @@
 	</div>
   <%= f.submit %>
 <% end %>
-</form>
 
 <%= link_to "Back to articles listing", articles_path %>
