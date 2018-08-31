@@ -1,24 +1,19 @@
-<% if @article.errors.any? %>
-<h2>The following errors prevented the article from getting created</h2>
-	<ul>
-	<% @article.errors.full_messages.each do |msg| %>
-		<li><%= msg %></li>
-	<% end %>
-	</ul>
-<% end %>
+<%= render 'shared/errors', obj: @article%>
 <%= form_for @article do |f| %>
 	<div class="form-group">
-	<%= f.label :title %>
-  <%= f.text_field :title, class: "form-control", placeholder: "Enter Title here", aria_describedby:"titleHelp" %>
-  <small id="titlelHelp" class="form-text text-muted">Use an interesting title, at least 5 symbols</small>
+		<%= f.label :title %>
+  	<%= f.text_field :title, class: "form-control", placeholder: "Enter Title here", aria_describedby:"titleHelp" %>
+  	<small id="titlelHelp" class="form-text text-muted">Use an interesting title, at least 5 symbols</small>
 	</div>
 
   <div class="form-group">
-  <%= f.label :description %><br />
-  <%= f.text_area :description, size: "60x12", class: "form-control", placeholder: "Enter your text here", aria_describedby: "descriptionHelp" %>
-  <small id="descriptionlHelp" class="form-text text-muted">At least 10 symbols.</small>
+  	<%= f.label :description %><br />
+  	<%= f.text_area :description, size: "60x12", class: "form-control", placeholder: "Enter your text here", aria_describedby: "descriptionHelp" %>
+  	<small id="descriptionlHelp" class="form-text text-muted">At least 10 symbols.</small>
 	</div>
-  <%= f.submit %>
+	<div class="form-group">
+  	<%= f.submit class: "btn btn-success" %>
+  </div>
 <% end %>
 
 <%= link_to "Back to articles listing", articles_path %>
