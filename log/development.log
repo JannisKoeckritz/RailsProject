@@ -6482,3 +6482,256 @@ Migrating to CreateUsers (20180831090957)
   [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
   [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToArticles (20180831100008)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" inteher[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180831100008"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-08-31 12:14:10 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 296ms (Views: 286.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-31 12:14:13 +0200
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-31 12:14:17 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (18.7ms)
+  Rendered articles/new.html.erb within layouts/application (21.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 63.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-31 12:14:35 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f8nILQLRjSoT9UyHgzoyy4u6xnyfRySMkZ48i51nwxFvvUF+OVLnA/4Q6tb/LkxF0A3Ky4lK7QIgTnyFYHrOOw==", "article"=>{"title"=>"Post with User", "description"=>"This article is created by a user"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Post with User"], ["description", "This article is created by a user"], ["created_at", "2018-08-31 10:14:35.367932"], ["updated_at", "2018-08-31 10:14:35.367932"], ["user_id", 5]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/22
+Completed 302 Found in 22ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/articles/22" for 127.0.0.1 at 2018-08-31 12:14:35 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-08-31 12:16:47 +0200
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (4.2ms)
+  Rendered articles/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-31 12:17:01 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTaICrxNlAm4IJHJqpwV8MueSKvKbr47x9DL+rwtL/AtQgFZh87+IFXFN5jWiGt+kClEHNxjd7V2AIv0QTAi2g==", "article"=>{"title"=>"Article with article", "description"=>"test debugger"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering articles/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (3.5ms)
+  Rendered articles/new.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 37095ms (Views: 46.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-08-31 12:18:07 +0200
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PTaICrxNlAm4IJHJqpwV8MueSKvKbr47x9DL+rwtL/AtQgFZh87+IFXFN5jWiGt+kClEHNxjd7V2AIv0QTAi2g==", "article"=>{"title"=>"Article with article", "description"=>"test debugger"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "description", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Article with article"], ["description", "test debugger"], ["created_at", "2018-08-31 10:18:07.218292"], ["updated_at", "2018-08-31 10:18:07.218292"], ["user_id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/23
+Completed 302 Found in 21ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/articles/23" for 127.0.0.1 at 2018-08-31 12:18:08 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 52ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/23/edit" for 127.0.0.1 at 2018-08-31 12:18:14 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (4.8ms)
+  Rendered articles/edit.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/23" for 127.0.0.1 at 2018-08-31 12:18:20 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kcnWiAOUyvlFJcL1wMqgqopxSmW6KCAQe0PgJaogduV+AlZB9ZU656CY1cwOJkunhFQKwVtca8sRQ/be0ZUkpw==", "article"=>{"title"=>"Article with debugger", "description"=>"test debugger"}, "commit"=>"Update Article", "id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "Article with debugger"], ["updated_at", "2018-08-31 10:18:20.168184"], ["id", 23]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/23
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/23" for 127.0.0.1 at 2018-08-31 12:18:20 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/23" for 127.0.0.1 at 2018-08-31 12:20:18 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial <pre class="debug_dump">--- !ruby/object:ActionController::Parameters
+parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  controller: articles
+  action: show
+  id: &#39;23&#39;
+permitted: false
+</_pre> with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/janniskoeckritz/Documents/GitHub/RailsProject/app/views"
+):
+    15:     	<%= yield %>
+    16: 	</div>
+    17: 	<%= render 'layouts/footer' %>
+    18:   <%= render debug(params) if Rails.env.development? %>
+    19:   </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__3588842393242320241_70154683794260'
+Started GET "/articles/23/edit" for 127.0.0.1 at 2018-08-31 12:20:38 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered articles/_form.html.erb (4.6ms)
+  Rendered articles/edit.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial <pre class="debug_dump">--- !ruby/object:ActionController::Parameters
+parameters: !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  controller: articles
+  action: edit
+  id: &#39;23&#39;
+permitted: false
+</_pre> with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/janniskoeckritz/Documents/GitHub/RailsProject/app/views"
+):
+    15:     	<%= yield %>
+    16: 	</div>
+    17: 	<%= render 'layouts/footer' %>
+    18:   <%= render debug(params) if Rails.env.development? %>
+    19:   </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:18:in `_app_views_layouts_application_html_erb__3588842393242320241_70154681212380'
+Started GET "/articles/23/edit" for 127.0.0.1 at 2018-08-31 12:20:53 +0200
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered articles/_form.html.erb (4.8ms)
+  Rendered articles/edit.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 63.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/articles/23" for 127.0.0.1 at 2018-08-31 12:20:58 +0200
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HevH9umTH+q5z6ObLME6amwJr6ZLzIZRfesATO15DfqVO1yFBqWdpwEccaTDpcgXXlKHtnTWUs5r4FoUg8vhXg==", "article"=>{"title"=>"Article with debugger", "description"=>"test debugger"}, "commit"=>"Update Article", "id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/23
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/23" for 127.0.0.1 at 2018-08-31 12:20:58 +0200
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.1ms)
+
+
