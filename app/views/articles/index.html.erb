@@ -1,27 +1,24 @@
-<h1>All Articles</h1>
+<h1 align="center" >All Articles</h1>
 <p>
-	<%= link_to "Create new article", new_article_path %>
+	<%= link_to "Create new article", new_article_path, class: "btn btn-success" %>
 </p>
-<table class="table">
-	<thead class="thead-light">
-		<tr>
-			<th scope="col">#</th>
-			<th scope="col">Title</th>
-			<th scope="col">Description</th>
-			<th scope="col"></th>
-			<th scope="col"></th>
-			<th scope="col"></th>
-		</tr>
-	</thead>
 <% @articles.each do |a| %>
-	<tr>
-		<th scope="col"><%= a.id %></th>
-		<td><%= a.title %></td>
-		<td><%= a.description %></td>
-		<td><%= link_to "Edit", edit_article_path(a) %></td>
-		<td><%= link_to "Show", article_path(a) %> </td>
-		<td><%= link_to "Delete", article_path(a), class: "deleteButton", method: :delete, data: {confirm: "Are you sure?"} %></td>
-	<tr>
+	<div class="row">
+		<div class="col-sm-8">
+			<div class="article-bubble">
+				<div class="article-title">
+					<%= link_to a.title, article_path(a) %>
+				</div>
+				<div class="article-body">
+					<%= truncate(a.description, length: 200) %>
+				</div>
+				<div class="button_class">
+				<%= link_to "Edit", edit_article_path(a), class: "btn btn-sm btn-primary" %> | 
+				<%= link_to "Show", article_path(a) %> | 
+				<%= link_to "Delete", article_path(a), class: "deleteButton", method: :delete, data: {confirm: "Are you sure?"} %>
+				</div>
+			</div>
+		</div>
+	</div>
 <% end %>
-</table>
 <%= link_to "Back to the home page", root_path %>
