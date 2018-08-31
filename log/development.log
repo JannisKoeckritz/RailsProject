@@ -5703,6 +5703,7 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 0.4ms)
 
 
+<<<<<<< HEAD
 Started GET "/articles/19" for 127.0.0.1 at 2018-08-31 09:41:40 +0200
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by ArticlesController#show as HTML
@@ -6191,3 +6192,5 @@ Completed 200 OK in 5900ms (Views: 5898.1ms | ActiveRecord: 0.2ms)
 Completed 200 OK in 5947ms (Views: 5939.7ms | ActiveRecord: 0.2ms)
 
 
+=======
+>>>>>>> d0ad869f938de171a9d01a4da23530d423eb84c3
