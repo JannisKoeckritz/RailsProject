@@ -13,6 +13,7 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'bootstrap', '~> 4.1.3'
 gem 'sass-rails', '~> 5.0'
+gem 'pg'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -42,7 +43,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
