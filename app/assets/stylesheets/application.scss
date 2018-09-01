@@ -76,7 +76,7 @@
  	margin-top:10px;
  }
 
- .article-bubble {
+ .listing-bubble {
  	border: 1px solid #EAEAEA;
  	padding: 8px;
  	margin-bottom: 10px;
@@ -84,27 +84,27 @@
  	background-color: #F8F8FF;
  }
 
- .article-title {
+ .listing-title {
  	font-weight: bold;
  	font-size: 1.5em;
  }
 
- .article-title a:hover {
+ .listing-title a:hover {
  	text-decoration: none
  }
 
- .article-body {
+ .listing-body {
  	border-top: 1px solid #EAEAEA;
  	padding-top: 10px;
  }
 
- .article-meta-details {
+ .listing-meta-details {
  	font-size: 15px;
  	font-style: italic;
  	margin-top: 15px;
  }
 
- .centered-articles {
+ .centered-listing {
  	margin:auto;
  	width: 600px;
  }
@@ -132,4 +132,9 @@
  #logo:hover{
  	color:#FFF;
  	text-decoration: none;
+ }
+
+ .users-view {
+ 	list-style: none;
+ 	padding: 0px;
  }

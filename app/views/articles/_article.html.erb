@@ -1,12 +1,12 @@
-<% obj  .each do |a| %>
-		<div class="centered-articles">
-			<div class="article-bubble">
-				<div class="article-title">
+<% obj.each do |a| %>
+		<div class="centered-listing">
+			<div class="listing-bubble">
+				<div class="listing-title">
 					<%= link_to a.title, article_path(a) %>
 				</div>
-				<div class="article-body">
+				<div class="listing-body">
 					<%= truncate(a.description, length: 200) %>
-				<div class="article-meta-details">
+				<div class="listing-meta-details">
 					<small>
 						Created by <%= a.user.username if a.user %>, 
 						<%= time_ago_in_words(a.created_at) %> ago,

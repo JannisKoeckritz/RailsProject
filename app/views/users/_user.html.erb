@@ -1,0 +1,24 @@
+<div align="center">
+	<% obj.each do |u| %>
+		<div class="centered-view">
+			<div class="listing-bubble">
+				<ul class="users-view">
+					<li class="listing-title">
+						<%= link_to gravatar_for(u), user_path(u) %>
+					</li>
+					<li class="listing-title">
+						<%= link_to u.username, user_path(u) %>
+					</li>
+					<li class="listing-body">
+						<%= pluralize(u.articles.count, "article") if u.articles %>
+					</li>
+					<li class="listing-meta-details">
+						<small> 
+							Time since registration: <%= time_ago_in_words(u.created_at) %> ago
+						</small>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<% end %>
+</div>
