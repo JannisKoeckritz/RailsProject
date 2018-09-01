@@ -1,29 +1,6 @@
 <h1 align="center" >All Articles</h1>
-<p>
-	<%= link_to "Create new article", new_article_path, class: "btn btn-success" %>
-</p>
-<% @articles.each do |a| %>
-		<div class="centered-articles">
-			<div class="article-bubble">
-				<div class="article-title">
-					<%= link_to a.title, article_path(a) %>
-				</div>
-				<div class="article-body">
-					<%= truncate(a.description, length: 200) %>
-				<div class="article-meta-details">
-					<small>
-						Created by <%= a.user.username if a.user %>, 
-						<%= time_ago_in_words(a.created_at) %> ago,
-						last updated: <%= time_ago_in_words(a.updated_at) %>
-					</small>
-				</div>
-				</div>
-				<div class="button_class">
-				<%= link_to "Edit", edit_article_path(a), class: "btn btn-sm btn-primary" %> | 
-				<%= link_to "Show", article_path(a) %> | 
-				<%= link_to "Delete", article_path(a), class: "deleteButton", method: :delete, data: {confirm: "Are you sure?"} %>
-				</div>
-			</div>
-		</div>
-<% end %>
-<%= link_to "Back to the home page", root_path %>
+<%= render "article", obj: @articles %>
+<div align="center">
+	<%= link_to "Create new article", new_article_path, class: "btn btn-success" %><br>
+	<%= link_to "Back to the home page", root_path %>
+</div>
