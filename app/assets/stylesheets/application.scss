@@ -104,6 +104,26 @@
  	margin-top: 15px;
  }
 
+ .centered-articles {
+ 	margin:auto;
+ 	width: 600px;
+ }
+
+ .centered-container {
+ 	margin: auto;
+ 	width: 350px;
+ 	border: 1px solid black;
+ 	margin-top:10px;
+ 	margin-bottom: 10px;
+ 	padding: 10px;
+ 	border-radius: 8px;
+ 	color: #FFFFFF;
+ }
+
+ .signup {
+ 	float: right;
+ }
+
  #logo:hover{
  	color:#FFF;
  	text-decoration: none;
