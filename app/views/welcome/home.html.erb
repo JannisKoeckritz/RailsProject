@@ -3,6 +3,8 @@
   <p class="lead">This is the best blog-providing service on the web and it's getting better and better every day!</p>
   <hr class="my-3">
   <p>Create your own posts or get inspired by intresting texts from all over the world!</p>
-  <%= link_to "Start now!", signup_path, class: "btn btn-primary btn-lg", role: "button"%>
+  <% if !logged_in? %>
+  	<%= link_to "Start now!", signup_path, class: "btn btn-primary btn-lg", role: "button"%>
+  <% end %>
 </div>
 <%= link_to 'Alpha Blog', articles_path %> | <%=	link_to 'About', about_path %>
