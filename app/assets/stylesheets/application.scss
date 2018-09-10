@@ -82,6 +82,7 @@
  	margin-bottom: 10px;
  	border-radius: 8px;
  	background-color: #F8F8FF;
+ 	width: 600px;
  }
 
  .listing-title {
@@ -138,6 +139,16 @@
  	padding: 0px;
  }
 
- .pagination-blog {
- 	
+ .admin-note{
+ 	font-size: 10px;
+ }
+
+ .nav-profile {
+ 	font-size: 10px;
+ 	font-weight: bold;
+ 	font-style: italic;
+ }
+ 
+ .delete-link {
+ 	color: red;
  }

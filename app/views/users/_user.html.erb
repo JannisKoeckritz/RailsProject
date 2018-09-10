@@ -8,6 +8,7 @@
 					</li>
 					<li class="listing-title">
 						<%= link_to u.username, user_path(u) %>
+						<span class="admin-note"><%= "Admin" if u.admin %></span>
 					</li>
 					<li class="listing-body">
 						<%= pluralize(u.articles.count, "article") if u.articles %>
@@ -17,6 +18,12 @@
 							Time since registration: <%= time_ago_in_words(u.created_at) %> ago
 						</small>
 					</li>
+					<% if logged_in? && current_user.admin? && current_user != u %>
+						<li>
+							<small><%= link_to "Delete this user", user_path(u), method: :delete, data: { confirm: "Are you sure you want to delete the user and all their articles?"}, class: "delete-link" %>
+							</small>
+						</li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
