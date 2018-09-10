@@ -1,6 +1,10 @@
 <h1 align="center" >All Articles</h1>
+<%= will_paginate @articles, renderer: BootstrapPagination::Rails  %>
 <%= render "article", obj: @articles %>
 <div align="center">
+	<div align="center" class="pagination-blog">
+		<%= will_paginate class: "page-item" %>
+	</div>
 	<%= link_to "Create new article", new_article_path, class: "btn btn-success" %><br>
 	<%= link_to "Back to the home page", root_path %>
 </div>
