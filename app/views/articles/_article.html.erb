@@ -8,7 +8,9 @@
 					<%= truncate(a.description, length: 200) %>
 				<div class="listing-meta-details">
 					<small>
-						Created by <%= a.user.username if a.user %>, 
+						<% if a.user %>
+						Created by <%= link_to a.user.username, user_path(a.user) %>,
+						<% end %>
 						<%= time_ago_in_words(a.created_at) %> ago,
 						last updated: <%= time_ago_in_words(a.updated_at) %>
 					</small>
