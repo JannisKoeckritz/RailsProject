@@ -6,7 +6,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to "Home", articles_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
@@ -22,25 +22,36 @@
       <li class="nav-item">
         <%= link_to "Users" , users_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
-        <%= link_to "Your Profile" , articles_path, class: "nav-link" %>
-      </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+<!--     <form class="form-inline ml-auto">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0 search-nav" type="submit">Search</button>
-    </form>
+    </form> -->
     <% if logged_in? %>
-      <form class="form-inline my-3 my-lg-0 nav-signup">
-        <%= link_to "Log out", logout_path, method: :delete, class: "btn btn-dark my-2 my-sm-0" %>
-      </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Your Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Edit profile", edit_user_path(current_user), class: "dropdown-item" %>
+          <div class="dropdown-divider"></div>
+          <%= link_to "View profile", user_path(current_user), class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Log out", logout_path, method: :delete, class: "nav-link" %>
+      </li>
+    </ul>
     <% else %>
-      <form class="form-inline my-3 my-lg-0 nav-signup">
-        <%= link_to "Log in", login_path, class: "btn btn-success my-2 my-sm-0" %>
-      </form>
-      <form class="form-inline my-3 my-lg-0 nav-signup">
-        <%= link_to "Sign up", signup_path, class: "btn btn-dark my-2 my-sm-0" %>
-      </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to "Log in", login_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Sign up", signup_path, class: "nav-link" %>
+      </li>
+    </ul>
     <% end %>
   </div>
 </nav>

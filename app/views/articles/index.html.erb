@@ -1,5 +1,7 @@
 <h1 align="center" >All Articles</h1>
-<%= will_paginate @articles, renderer: BootstrapPagination::Rails  %>
+<div align="center" class="pagination-blog">
+		<%= will_paginate class: "page-item" %>
+	</div>
 <%= render "article", obj: @articles %>
 <div align="center">
 	<div align="center" class="pagination-blog">
