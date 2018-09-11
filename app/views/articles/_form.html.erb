@@ -11,6 +11,13 @@
   	<%= f.text_area :description, size: "60x12", class: "form-control", placeholder: "Enter your text here", aria_describedby: "descriptionHelp" %>
   	<small id="descriptionlHelp" class="form-text text-muted">At least 10 symbols.</small>
 	</div>
+  <div class="form-group">
+    <div class="form-check form-check-inline">
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+        <% cb.label(class: "form-check-label", for: :id) {cb.check_box(class: "form-check-input", id: :id) + cb.text} %>
+      <% end %>
+    </div>
+  </div>
 	<div class="form-group">
   	<%= f.submit class: "btn btn-success" %>
   </div>

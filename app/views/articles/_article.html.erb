@@ -6,15 +6,20 @@
 				</div>
 				<div class="listing-body">
 					<%= truncate(a.description, length: 200) %>
-				<div class="listing-meta-details">
-					<small>
-						<% if a.user %>
-						Created by <%= link_to a.user.username, user_path(a.user) %>,
+					<div class="listing-category">
+						<% a.categories.each do |ac| %>
+							<%= link_to "#" + ac.name, category_path(ac), class: "badge badge-pill badge-dark listing-category-link" %>
 						<% end %>
-						<%= time_ago_in_words(a.created_at) %> ago,
-						last updated: <%= time_ago_in_words(a.updated_at) %>
-					</small>
-				</div>
+					</div>
+					<div class="listing-meta-details">
+						<small>
+							<% if a.user %>
+							Created by <%= link_to a.user.username, user_path(a.user) %>,
+							<% end %>
+							<%= time_ago_in_words(a.created_at) %> ago,
+							last updated: <%= time_ago_in_words(a.updated_at) %>
+						</small>
+					</div>
 				</div>
 				<% if logged_in? && (current_user == a.user || current_user.admin?) %>
 					<div class="button_class">

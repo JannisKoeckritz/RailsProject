@@ -1,1 +1,10 @@
-<h1 align="center"><%= @category.name %></h1>
+<h2 align="center"><%= @category.name %></h1>
+<div align="center" class="pagination-blog">
+	<%= will_paginate @category_articles, class: "page-item" %>
+</div>
+<% if @category_articles %>
+	<%= render "articles/article", obj: @category_articles %>
+<% end %>
+<div align="center" class="pagination-blog">
+	<%= will_paginate @category_articles, class: "page-item" %>
+</div>

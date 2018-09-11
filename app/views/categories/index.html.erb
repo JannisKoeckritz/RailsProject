@@ -1,32 +1,11 @@
 <h1 align="center">Listing All Categories</h1>
 <div align="center">
-	<div align="center"><%= will_paginate @categories %></div>
-	<% @categories.each do |c| %>
-		<div class="centered-view">
-			<div class="listing-bubble">
-				<ul class="listing-view">
-					<li class="listing-title">
-						<%= link_to c.name, category_path(c) %>
-					</li>
-					<li class="listing-meta-details">
-						<small> 
-							Created: <%= time_ago_in_words(c.created_at) %> ago
-						</small>
-					</li>
-					<% if logged_in? && current_user.admin? %>
-						<li>
-							<small><%= link_to "Delete this category", category_path(c), method: :delete, data: { confirm: "Are you sure you want to delete this category?"}, class: "delete-link" %>
-							</small>
-						</li>
-					<% end %>
-				</ul>
-			</div>
-		</div>
-	<% end %>
+	<div align="center" class="pagination-blog"><%= will_paginate @categories, class: "page-item" %></div>
+	<%= render 'category', obj: @categories %>
 	<% if logged_in? && current_user.admin? %>
 		<div class="form-group">
 			<%= link_to "Create Category", new_category_path, class: "btn btn-success"%>
 		</div>
 	<% end %>
-	<div align="center"><%= will_paginate @categories%></div>
+	<div align="center" class="pagination-blog"><%= will_paginate @categories, class: "page-item"%></div>
 </div>

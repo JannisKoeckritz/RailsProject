@@ -102,7 +102,7 @@
  .listing-meta-details {
  	font-size: 15px;
  	font-style: italic;
- 	margin-top: 15px;
+ 	margin-top: 5px;
  }
 
  .centered-listing {
@@ -150,4 +150,13 @@
  
  .delete-link {
  	color: red;
+ }
+
+ .listing-category {
+ 	padding-top: 2px;
+ }
+
+ .listing-category-link {
+ 	font-size: 11px;
+ 	text-transform: uppercase;
  }
