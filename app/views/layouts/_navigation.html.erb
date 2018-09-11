@@ -11,16 +11,30 @@
           Articles
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to "Create a new article", new_article_path, class: "dropdown-item" %>
-          <div class="dropdown-divider"></div>
+          <% if logged_in? %>
+            <%= link_to "Create a new article", new_article_path, class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+          <% end %>
           <%= link_to "View all articles", articles_path, class: "dropdown-item" %>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "View all categories", categories_path, class: "dropdown-item" %>
+          <%= render "layouts/categories" %>
+          <% if logged_in? %>
+            <% if current_user.admin? %>
+              <div class="dropdown-divider"></div>
+              <%= link_to "Create a new categorie", new_category_path, class: "dropdown-item" %>
+            <% end %>
+          <% end %>
         </div>
       </li>
       <li class="nav-item">
         <%= link_to "Users" , users_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Categories" , categories_path, class: "nav-link" %>
       </li>
     </ul>
 <!--     <form class="form-inline ml-auto">

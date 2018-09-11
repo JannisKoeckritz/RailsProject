@@ -10,7 +10,7 @@
 					</li>
 					<li class="listing-meta-details">
 						<small> 
-							Used first: <%= time_ago_in_words(c.created_at) %> ago
+							Created: <%= time_ago_in_words(c.created_at) %> ago
 						</small>
 					</li>
 					<% if logged_in? && current_user.admin? %>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	<% end %>
-	<% if current_user.admin? %>
+	<% if logged_in? && current_user.admin? %>
 		<div class="form-group">
 			<%= link_to "Create Category", new_category_path, class: "btn btn-success"%>
 		</div>

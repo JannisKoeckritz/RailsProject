@@ -1,2 +1,6 @@
 <h1 align="center">Users listing</h1>
-<%= render 'user', obj: @users %> 
+<div align="center">
+	<div align="center"><%= will_paginate @users %></div>
+	<%= render 'user', obj: @users %>
+	<div align="center"><%= will_paginate @users %></div>
+</div>
