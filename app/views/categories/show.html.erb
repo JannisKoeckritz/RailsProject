@@ -1,4 +1,7 @@
-<h2 align="center"><%= @category.name %></h1>
+<h2 align="center"><%= @category.name %></h2>
+<% if logged_in? && current_user.admin? %>
+	<%= link_to "Edit category name", edit_category_path(@category), class: "btn btn-info edit-link-right" %>
+<% end %>
 <div align="center" class="pagination-blog">
 	<%= will_paginate @category_articles, class: "page-item" %>
 </div>

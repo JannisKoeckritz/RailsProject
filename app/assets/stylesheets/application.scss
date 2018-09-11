@@ -148,6 +148,10 @@
  	font-weight: bold;
  }
  
+	.edit-link {
+		color:green;
+	}
+
  .delete-link {
  	color: red;
  }
@@ -159,4 +163,8 @@
  .listing-category-link {
  	font-size: 11px;
  	text-transform: uppercase;
+ }
+
+ .edit-link-right {
+ 	float: right;
  }
