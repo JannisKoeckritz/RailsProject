@@ -1,5 +1,6 @@
 <h1 align="center">Listing All Categories</h1>
 <div align="center">
+	<div align="center"><%= will_paginate @categories %></div>
 	<% @categories.each do |c| %>
 		<div class="centered-view">
 			<div class="listing-bubble">
@@ -22,4 +23,5 @@
 			</div>
 		</div>
 	<% end %>
+	<div align="center"><%= will_paginate @categories%></div>
 </div>

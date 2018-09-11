@@ -19,6 +19,9 @@
       <li class="nav-item">
         <%= link_to "Users" , users_path, class: "nav-link" %>
       </li>
+      <li class="nav-item">
+        <%= link_to "Categories" , categories_path, class: "nav-link" %>
+      </li>
     </ul>
 <!--     <form class="form-inline ml-auto">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -28,7 +31,7 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="nav-profile"> <%= t(current_user.username)%>'s profile</span>
+          <span class="nav-profile"> <%= current_user.username%>'s profile</span>
           <% if current_user.admin? %>
             <span class="badge badge-pill badge-info">Admin</span>
           <% end %>
