@@ -12,7 +12,7 @@ gem 'rails', '~> 5.1.6'
 gem 'puma', '~> 3.7'
 gem 'rails-controller-testing','1.0.2'
 # Use SCSS for stylesheets
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'sass-rails', '~> 5.0'
 gem 'pg'
 # Use Bcrypt for secure passwords
